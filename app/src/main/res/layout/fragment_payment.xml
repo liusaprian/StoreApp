@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.checkout.payment.PaymentFragment">
+
+    <ImageView
+        android:id="@+id/payment_back_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/payment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/payment"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/payment_back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/payment_back_btn" />
+
+    <TextView
+        android:id="@+id/card_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_number"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_title" />
+
+    <EditText
+        android:id="@+id/card_number_textbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:hint="1234 1234 1234 1234"
+        android:drawableStart="@drawable/ic_baseline_credit_card_24"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/textbox_background"
+        app:layout_constraintTop_toBottomOf="@+id/card_number_text"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/expiration_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expiration"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_number_textbox" />
+
+    <EditText
+        android:id="@+id/expiration_textbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/textbox_background"
+        android:hint="MM / YY"
+        android:padding="20dp"
+        app:layout_constraintEnd_toStartOf="@id/secure_code_textbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expiration_text" />
+
+    <TextView
+        android:id="@+id/secure_code_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/security_code"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/secure_code_textbox"
+        app:layout_constraintTop_toBottomOf="@+id/card_number_textbox" />
+
+    <EditText
+        android:id="@+id/secure_code_textbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textbox_background"
+        android:hint="1234"
+        android:padding="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/expiration_textbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secure_code_text" />
+
+    <TextView
+        android:id="@+id/card_holder_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_holder"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expiration_textbox" />
+
+    <EditText
+        android:id="@+id/card_holder_textbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textbox_background"
+        android:hint="Your name and surname"
+        android:padding="20dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/card_holder_text"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/subtotal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subtotal"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_holder_textbox" />
+
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$289.54"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/subtotal_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/subtotal_text" />
+
+    <TextView
+        android:id="@+id/taxes_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/taxes"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtotal_text" />
+
+    <TextView
+        android:id="@+id/taxes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$28.95"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/taxes_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taxes_text" />
+
+    <TextView
+        android:id="@+id/total_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total"
+        android:textSize="28sp"
+        android:textColor="@color/color_alert"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taxes_text" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$312.49"
+        android:textColor="@color/color_alert"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/total_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/total_text" />
+
+    <TextView
+        android:id="@+id/save_data_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/save_card_data"
+        app:layout_constraintBottom_toTopOf="@+id/place_order_btn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/save_data_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/save_data_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/save_data_text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/place_order_btn"
+        style="@style/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/place_order"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

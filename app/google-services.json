@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1057980419494",
+    "project_id": "storeapp-be936",
+    "storage_bucket": "storeapp-be936.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057980419494:android:361c57df070c26ff781367",
+        "android_client_info": {
+          "package_name": "app.liusaprian.storeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057980419494-850utj3l8vo0c8bu762ph6jm96b367mq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlWhKLHaXlOo2KtiYmdu5uoSpPNiQ8COg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057980419494-850utj3l8vo0c8bu762ph6jm96b367mq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/bottomSheetStyle"
+    tools:showIn="@layout/activity_product_detail"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="260dp"
+    android:orientation="vertical"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/favorite_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginHorizontal="16dp"
+        app:rippleColor="@color/color_secondary"
+        android:backgroundTint="@color/white"
+        app:fabCustomSize="48dp"
+        android:src="@drawable/ic_baseline_favorite_border_24"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/rounded_dialog"
+        android:layout_marginTop="12dp">
+
+        <ImageView
+            android:id="@+id/horizontal_line"
+            android:layout_width="64dp"
+            android:layout_height="6dp"
+            android:src="@drawable/bottom_sheet_horizontal_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/product_detail_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/product_detail_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_line"
+            tools:text="Winter Coat" />
+
+        <TextView
+            android:id="@+id/product_detail_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/product_detail_price"
+            app:layout_constraintStart_toStartOf="@+id/product_detail_name"
+            app:layout_constraintTop_toBottomOf="@+id/product_detail_name"
+            tools:text="Men's Clothing" />
+
+        <TextView
+            android:id="@+id/product_detail_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/product_detail_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/product_detail_name"
+            tools:text="$80" />
+
+        <TextView
+            android:id="@+id/desc_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:alpha="0"
+            app:layout_constraintTop_toBottomOf="@+id/product_detail_category"/>
+
+        <TextView
+            android:id="@+id/product_detail_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket."
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="80dp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc_text"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
